@@ -41,7 +41,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
                 <iconify-icon icon="solar:text-field-focus-line-duotone"></iconify-icon>
-                <span class="hide-menu">Typography</span>
+                <span class="hide-menu">Magang</span>
               </a>
             </li>
 
@@ -52,7 +52,7 @@
             <li class="sidebar-item">
                 <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
                   <iconify-icon icon="solar:sticker-smile-circle-2-line-duotone"></iconify-icon>
-                  <span class="hide-menu">Icons</span>
+                  <span class="hide-menu">User</span>
                 </a>
             <li>
               <span class="sidebar-divider lg"></span>
@@ -62,7 +62,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
                 <iconify-icon icon="solar:planet-3-line-duotone"></iconify-icon>
-                <span class="hide-menu">Sample Page</span>
+                <span class="hide-menu">Sample</span>
               </a>
             </li>
 

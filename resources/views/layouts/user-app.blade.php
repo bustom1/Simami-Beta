@@ -7,6 +7,7 @@
   <title>SIMAMI</title>
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
+          <a href="#" class="text-nowrap logo-img">
             <img src="../assets/images/logos/logo.svg" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -29,7 +30,7 @@
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="" aria-expanded="false">
                 <iconify-icon icon="solar:widget-add-line-duotone"></iconify-icon>
                 <span class="hide-menu">Dashboard</span>
               </a>
@@ -39,8 +40,9 @@
             </li>
 
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
-                <iconify-icon icon="solar:text-field-focus-line-duotone"></iconify-icon>
+              <a class="sidebar-link" href="" aria-expanded="false">
+                {{-- <iconify-icon icon="solar:text-field-focus-line-duotone"></iconify-icon> --}}
+                <i class="fas fa-briefcase"></i>
                 <span class="hide-menu">Magang</span>
               </a>
             </li>
@@ -50,8 +52,9 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                  <iconify-icon icon="solar:sticker-smile-circle-2-line-duotone"></iconify-icon>
+                <a class="sidebar-link" href="" aria-expanded="false">
+                  {{-- <iconify-icon icon="solar:sticker-smile-circle-2-line-duotone"></iconify-icon> --}}
+                  <i class="fas fa-user-plus"></i>
                   <span class="hide-menu">User</span>
                 </a>
             <li>
@@ -60,7 +63,7 @@
 
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
+              <a class="sidebar-link" href="" aria-expanded="false">
                 <iconify-icon icon="solar:planet-3-line-duotone"></iconify-icon>
                 <span class="hide-menu">Sample</span>
               </a>

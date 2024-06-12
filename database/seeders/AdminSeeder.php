@@ -14,7 +14,7 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('admins')->insert(
+        DB::table('admins')->insert([
             [
                 'users_id' => 1,
                 'agama' => 'islam',
@@ -39,6 +39,6 @@ class AdminSeeder extends Seeder
                 'tempat_lahir' => 'Jakarta',
                 'tanggal_lahir' => '1970-05-15',
             ]
-        );
+        ]);
     }
 }

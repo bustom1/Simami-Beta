@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 // Route CRUD Conpany
-Route::get('/admin/company', [CompanyController::class, 'index'])->name('admin.company');
+Route::get('/admin/company', [AdminController::class, 'index'])->name('admin.company');
 
 // Route CRUD Vacancy
 Route::get('/admin/vacancy', [VacancyController::class, 'index'])->name('admin.vacancy');

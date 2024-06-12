@@ -13,40 +13,42 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
+
     public function run(): void
     {
-        //create users seeders
-        DB::table('users')->insert(
+        // membuat seeder pengguna
+        DB::table('users')->insert([
             [
-                'name' => 'users1',
-                'email' => 'users1@mail.com',
-                'alamat' => '1234 Silicon Valley, CphpA',
+                'name' => 'admin1',
+                'email' => 'admin1@mail.com',
+                'alamat' => '1234 Silicon Valley, CA',
                 'password' => Hash::make('password123'),
+                'role' => 'admin',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'name' => 'users2',
-                'email' => 'users2@mail.com',
+                'name' => 'perusahaan1',
+                'email' => 'perusahaan1@mail.com',
                 'alamat' => '9101 Eco Park, TX',
                 'password' => Hash::make('password123'),
+                'role' => 'perusahaan',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'name' => 'users3',
-                'email' => 'users3@mail.com',
+                'name' => 'admin2',
+                'email' => 'admin2@mail.com',
                 'alamat' => '1011 Knowledge Ave, MA',
                 'password' => Hash::make('password123'),
+                'role' => 'perusahaan',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]
-        );
+        ]);
 
-        $this->call(
-            [
-                AdminSeeder::class,
-            ]
-        );
+        $this->call([
+            AdminSeeder::class,
+        ]);
     }
 }

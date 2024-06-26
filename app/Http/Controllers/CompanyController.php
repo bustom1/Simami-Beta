@@ -38,7 +38,8 @@ class CompanyController extends Controller
      */
     public function show(company $company)
     {
-        //
+        // show job magang
+        return view('admin.magang');
     }
 
     /**

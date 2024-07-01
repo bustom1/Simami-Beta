@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VacancyController;
+use App\Models\vacancy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,17 +17,20 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+// home user
 Route::get('/', function () {
     return view('home-user');
 });
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route CRUD Conpany
-Route::get('/admin', [AdminController::class, 'index'])->name('admin.company');
+// Route Admin
+// Home Admin
+Route::get('/admin', [HomeController::class, 'index'])->name('admin.company');
 
-Route::get('/admin/magang', [CompanyController::class, 'show'])->name('admin.add-magang');
+// CRUD Magang
+Route::get('/admin/magang', [VacancyController::class, 'index'])->name('admin.add-magang');
+Route::get('/admin/magang/create', [VacancyController::class, 'create'])->name('admin.create-magang');
+Route::post('/admin/magang/store', [VacancyController::class, 'store'])->name('store.vacancy');
 
 
-// Home User  => no login
-Route::get('/home', [HomeController::class, 'index'])->name('admin.user');
+Route::get('/admin/users', [AdminController::class, 'index'])->name('admin.add-users');

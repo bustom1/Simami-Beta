@@ -10,7 +10,7 @@
     <link rel="stylesheet" href=" {{ asset('vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href=" {{ asset('vendors/base/vendor.bundle.base.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('/css/styles.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />

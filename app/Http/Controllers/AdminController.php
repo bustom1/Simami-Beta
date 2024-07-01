@@ -13,7 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        return view('admin.index');
     }
 
     /**
@@ -21,7 +21,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        // create users by admin
+        // return view('admin.user');
     }
 
     /**

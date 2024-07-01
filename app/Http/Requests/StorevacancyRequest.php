@@ -11,7 +11,7 @@ class StorevacancyRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StorevacancyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'users_id' => 'required|integer',
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'phone' => 'nullable|numeric|digits_between:1,15',
         ];
     }
 }

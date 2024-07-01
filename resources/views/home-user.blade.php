@@ -4,9 +4,7 @@
         <div class="container-fluid page-body-wrapper">
             <div class="main-panel">
                 <div class="content-wrapper">
-
                     <div class="row">
-
                         <div class="col-lg-4 col-sm-6 d-flex grid-margin stretch-card">
                             <div class="card overflow-hidden hover-img">
                                 <div class="position-relative">

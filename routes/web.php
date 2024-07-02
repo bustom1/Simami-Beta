@@ -8,20 +8,11 @@ use App\Models\vacancy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-
 
 Auth::routes();
 
-// home user
-Route::get('/', function () {
-    return view('home-user');
-});
-
+// Home User
+Route::get('/', [AdminController::class, 'home_user'])->name('home-user');
 
 // Route Admin
 // Home Admin
@@ -32,5 +23,9 @@ Route::get('/admin/magang', [VacancyController::class, 'index'])->name('admin.ad
 Route::get('/admin/magang/create', [VacancyController::class, 'create'])->name('admin.create-magang');
 Route::post('/admin/magang/store', [VacancyController::class, 'store'])->name('store.vacancy');
 
-
+// CRUD User
 Route::get('/admin/users', [AdminController::class, 'index'])->name('admin.add-users');
+Route::get('/admin/users/create', [AdminController::class, 'create'])->name('create.users');
+
+// tes profile detail
+Route::get('/tes', [CompanyController::class, 'index']);

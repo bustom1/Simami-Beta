@@ -14,6 +14,7 @@
         "vite": "^5.2.11"
     },
     "dependencies": {
+        "datatables.net-dt": "^2.0.8",
         "gulp": "^5.0.0"
     }
 }

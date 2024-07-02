@@ -1,17 +1,22 @@
 @extends('layouts.master')
+@section('script')
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script>$('#myTable').DataTable();</script>
+@endsection
 
 @section('content')
     <div class="body-wrapper-inner">
         <div class="container-fluid">
-            <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-2 bg-succes">
                 <h3 class="fw-bold ms-3">Daftar Lowongan Magang</h3>
-                <a class="nav-link btn btn-rounded bg-success pe-4 ps-4 text-white me-4 p-3"
-                    href="{{ route('admin.create-magang') }}"><i class="fas fa-plus me-2"></i>Add Magang</a>
+                <a class="nav-link btn btn-rounded bg-success text-white me-4 " href="{{ route('admin.create-magang') }}"><i
+                        class="fas fa-plus me-2"></i>Add Magang</a>
             </div>
 
             <div class="card">
                 <div class="table-responsive text-nowrap">
-                    <table class="table">
+                    <table class="table" id="myTable">
                         <thead class="table-light">
                             <tr>
                                 <th>No</th>
@@ -22,7 +27,7 @@
                             </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
-                            <?php $no = 1 ?>
+                            <?php $no = 1; ?>
                             @foreach ($magang as $magangs)
                                 <tr>
                                     <td>{{ $no }}</td>
@@ -38,7 +43,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <?php $no++ ?>
+                                <?php $no++; ?>
                             @endforeach
 
                         </tbody>

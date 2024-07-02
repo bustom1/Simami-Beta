@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreadminRequest;
 use App\Http\Requests\UpdateadminRequest;
 use App\Models\admin;
-
+use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     /**
@@ -22,7 +22,7 @@ class AdminController extends Controller
     public function create()
     {
         // create users by admin
-        // return view('admin.user');
+        return view('admin.create');
     }
 
     /**
@@ -63,5 +63,10 @@ class AdminController extends Controller
     public function destroy(admin $admin)
     {
         //
+    }
+
+    public function home_user()
+    {
+        return view('home-user');
     }
 }

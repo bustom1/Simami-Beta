@@ -44,28 +44,40 @@
 </head>
 
 <body>
-    <div class="container-scroller">
+    <div class="container-scroller pb-sm-4 pb-5">
         <div class="horizontal-menu">
-            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+            <nav class="navbar top-navbar col-lg-12 col-sm-12 col-12 p-0">
                 <div class="container-fluid">
                     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
+
                         <ul class="navbar-nav navbar-nav-left">
-                            <li class="nav-item ms-3 lg-me-5 d-flex ">
-                                <a class="navbar-brand" href="#">
+                            <li class="nav-item ms-4 lg-me-5 d-flex ">
+                                <a class="navbar-brand" href="{{ route('home-user') }}">
                                     <img src="{{ asset('images/logo-simami.png') }}"
-                                        style="max-width: 100px; height: auto;" alt="logo" />
+                                        style="max-width: 150px; height: auto;" alt="logo" />
                                 </a>
                             </li>
                         </ul>
 
-                        <ul class="navbar-nav navbar-nav-right">
-                            <li class="nav-item nav-profile dropdown">
-                                <a href="{{ route('login') }}">
-                                    <img src="{{ asset('images/faces/face28.png') }}" alt="profile"
-                                        class="rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login" />
-                                </a>
-                            </li>
-                        </ul>
+                        @guest
+                            @if (Route::has('login'))
+                                <ul class="navbar-nav navbar-nav-right">
+                                    <li class="me-4">
+                                        <a href="{{ route('login') }}">
+                                            <i class="fa fa-2x fa-user" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            @endif
+                        @else
+                            <ul class="navbar-nav navbar-nav-right">
+                                <li class="me-4">
+                                    <a href="{{ route('admin.company') }}">
+                                        <i class="fa fa-2x fa-home" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        @endguest
                     </div>
                 </div>
             </nav>

@@ -32,6 +32,8 @@
     <script src={{ asset('assets/libs/vendor/js/helpers.js') }}></script>
     <script src={{ asset('assets/libs/js/config.js') }}></script>
 
+    @yield('script')
+
 </head>
 
 <body>
@@ -80,7 +82,7 @@
             <div class="layout-page">
 
                 {{-- Start Navbar --}}
-                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme mb-3"
                     id="layout-navbar">
                     <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
                         <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
